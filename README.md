@@ -49,9 +49,9 @@ Projekt został stworzony z wykorzystaniem:
 ## 🚀 Jak używać?
 
 1. **Dodaj nową klasę** – wpisz nazwę klasy i kliknij `Add` 🏫
-2. **Dodaj uczniów** – wpisz dane ucznia i kliknij `Dodaj` ✍️
-3. **Losuj ucznia** – kliknij `Losuj`, aby wybrać losowego ucznia 🎯
-4. **Usuń ucznia** – kliknij `Usuń`, aby usunąć ucznia z listy 🗑️
+2. **Dodaj uczniów** – wpisz dane ucznia i kliknij `Add` ✍️
+3. **Losuj ucznia** – kliknij `Randomize`, aby wybrać losowego ucznia 🎯
+4. **Usuń ucznia** – kliknij `Delete`, aby usunąć ucznia z listy 🗑️
 
 ---
 

@@ -1,0 +1,45 @@
+﻿^contentpage {
+    padding: 20;
+    background-color: #F0F8FF;
+    -maui-shell-title: #333;
+    -maui-shell-background: #B9FBC0;
+}
+
+#classView {
+    margin: 12;
+    padding: 14;
+    background-color: #B9FBC0;
+    font-size: 18;
+    width: 280;
+    text-align: center;
+    border-radius: 10;
+    shadow-color: gray;
+    shadow-opacity: 0.5;
+}
+
+#addClassBtn {
+    width: 140;
+    height: 50;
+    background: #4CAF50;
+    padding: 12;
+    font-weight: bold;
+    color: white;
+    border-radius: 8;
+    text-align: center;
+}
+
+#EnterClassNameLabel {
+    text-align: center;
+    font-size: 18;
+    color: #333;
+}
+
+#EnterClassNameInput {
+    text-align: center;
+    font-size: 16;
+    height: 40;
+    margin: 10;
+    border-radius: 8;
+    width: 220;
+    border: 1px solid #333;
+}

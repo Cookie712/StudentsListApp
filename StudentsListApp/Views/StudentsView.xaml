@@ -1,0 +1,45 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentsListApp.Views.StudentsView"
+             Title="Class">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="../Resources/Styles/StudentView.css" />
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto, *" Padding="20">
+        <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+            <VerticalStackLayout>
+                <Label Text="Name:" StyleId="pageLabel"/>
+                <Editor x:Name="studentName" StyleId="studentName" Placeholder="Name"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Surname:" StyleId="pageLabel"/>
+                <Editor x:Name="studentLastName" StyleId="studentLastName" Placeholder="Surname"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Number:" StyleId="pageLabel"/>
+                <Editor x:Name="studentNumber" StyleId="studentNumber" Keyboard="Numeric" Placeholder="Number"/>
+            </VerticalStackLayout>
+            <Button StyleId="addBtn" Text="Add" Clicked="onStudentAddClicked"/>
+            <Button StyleId="randomStudentBtn" Text="Randomize" Clicked="onGetRandomStudentClicked"/>
+        </StackLayout>
+
+        <CollectionView Grid.Row="1" x:Name="StudentsContainer" ItemsSource="{Binding Students}" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="lightgray" Padding="10" CornerRadius="10" WidthRequest="300" HorizontalOptions="Center">
+                        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name, StringFormat='Name: {0}'}" StyleId="dataLabelName"/>
+                                <Label Text="{Binding LastName, StringFormat='Surname: {0}'}" StyleId="dataLabel"/>
+                                <Label Text="{Binding Number, StringFormat='Number: {0}'}" StyleId="dataLabel"/>
+                            </VerticalStackLayout>
+                            <Button x:Name="DeleteButton" StyleId="deleteBtn" Text="Delete" Clicked="onStudentRemoveClicked"/>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
